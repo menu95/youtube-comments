@@ -9,8 +9,8 @@
   (:gen-class))
 
 ;; Use environment variable with fallback to ensure API key is available
-(def api-key (or (System/getenv "YOUTUBE_API_KEY")
-                 "AIzaSyBVsV-2kOMgNS3J-cCJhYcIdNkxBu1DzDM"))
+(def api-key (System/getenv "YOUTUBE_API_KEY")
+  )
 
 (defn fetch-comments [video-id]
   (println "Buscando comentários para o vídeo ID:" video-id)
